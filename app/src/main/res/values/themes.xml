@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.Luontopeli" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.Luontopeli.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#2E7D32</item>
+        <item name="postSplashScreenTheme">@style/Theme.Luontopeli</item>
+    </style>
 </resources>

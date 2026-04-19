@@ -16,6 +16,10 @@ ksp = "2.0.0-1.0.21"
 osmdroid = "6.1.18"
 accompanistPermissions = "0.34.0"
 coroutines = "1.8.1"
+camerax = "1.3.4"
+coil = "2.6.0"
+mlkitImageLabeling = "17.0.8"
+coreSplashscreen = "1.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -43,6 +47,12 @@ room-compiler = { group = "androidx.room", name = "room-compiler", version.ref =
 osmdroid = { group = "org.osmdroid", name = "osmdroid-android", version.ref = "osmdroid" }
 accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanistPermissions" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camerax" }
+camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camerax" }
+camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax" }
+coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+mlkit-image-labeling = { group = "com.google.mlkit", name = "image-labeling-default", version.ref = "mlkitImageLabeling" }
+core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "coreSplashscreen" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

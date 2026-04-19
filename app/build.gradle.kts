@@ -72,6 +72,20 @@ dependencies {
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
 
+    // CameraX
+    implementation(libs.camera.camera2)
+    implementation(libs.camera.lifecycle)
+    implementation(libs.camera.view)
+
+    // Coil
+    implementation(libs.coil.compose)
+
+    // ML Kit Image Labeling
+    implementation(libs.mlkit.image.labeling)
+
+    // SplashScreen
+    implementation(libs.core.splashscreen)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
