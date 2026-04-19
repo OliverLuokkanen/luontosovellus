@@ -13,6 +13,8 @@ import kotlinx.coroutines.launch
 import org.osmdroid.util.GeoPoint
 import javax.inject.Inject
 
+private const val MAX_ROUTE_POINTS = 5000
+
 data class MapUiState(
     val currentLocation: Location? = null,
     val routePoints: List<GeoPoint> = emptyList()
@@ -31,9 +33,10 @@ class MapViewModel @Inject constructor(
             locationHelper.locationUpdates.collect { location ->
                 _uiState.update { state ->
                     val newPoint = GeoPoint(location.latitude, location.longitude)
+                    val updatedPoints = (state.routePoints + newPoint).takeLast(MAX_ROUTE_POINTS)
                     state.copy(
                         currentLocation = location,
-                        routePoints = state.routePoints + newPoint
+                        routePoints = updatedPoints
                     )
                 }
             }
