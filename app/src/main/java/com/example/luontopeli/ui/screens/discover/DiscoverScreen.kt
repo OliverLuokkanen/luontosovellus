@@ -170,7 +170,7 @@ private fun NatureSpotCard(spot: NatureSpot) {
 }
 
 private fun formatDate(timestamp: Long): String {
-    val sdf = SimpleDateFormat("d.M.yyyy HH:mm", Locale("fi"))
-    return sdf.format(Date(timestamp))
+    return DATE_FORMAT.format(Date(timestamp))
 }
 
+private val DATE_FORMAT = SimpleDateFormat("d.M.yyyy HH:mm", Locale("fi"))

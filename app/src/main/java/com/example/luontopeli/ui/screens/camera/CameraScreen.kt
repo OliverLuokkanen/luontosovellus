@@ -108,7 +108,10 @@ fun CameraScreen(viewModel: CameraViewModel = hiltViewModel()) {
                     preview,
                     imageCapture
                 )
-            } catch (_: Exception) { }
+            } catch (e: Exception) {
+                    // Camera binding failed – device may not support the selected lens or use case.
+                    e.printStackTrace()
+                }
         }, ContextCompat.getMainExecutor(context))
     }
 
